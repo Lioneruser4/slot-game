@@ -179,17 +179,17 @@ export function Slot(options) {
     }
 
     this.soundEffects.win.play();
-    console.group('Current win');
+    console.group('Cari Qazanc');
     const totalWin = winners.reduce((acc, { money }) => acc + money, 0);
     for (const winner of winners) {
       // We have a winner, let's highlight the blocks
       this.visualEffects.highlight(winner.blocks);
-      console.info(`Winner: ${winner.type}, line: ${winner.rowIndex}, win: $${winner.money}`);
+      console.info(`Qazanc: ${winner.type}, line: ${winner.rowIndex}, win: $${winner.money}`);
     }
 
     this.player.addWin(totalWin);
 
-    console.info(`Total win: $${totalWin}`);
+    console.info(`Toplam Qazanc: $${totalWin}`);
     console.groupEnd();
 
     // Let's keep user from spinning again while we are highlighting the blocks
